@@ -1,0 +1,24 @@
+{
+  "name": "Twilio Flex Sidebar",
+  "version": "0.0.3",
+  "description": "Use Twilio Flex in a Chrome sidebar.",
+  "web_accessible_resources": ["entry.js"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Twilio Flex Sidebar"
+  },
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.twilio.com/",
+    "*://*.twil.io/"
+  ]
+}

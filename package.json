@@ -1,0 +1,31 @@
+{
+  "name": "twilio-flex-sidebar",
+  "private": true,
+  "version": "0.0.3",
+  "main": "dist/entry.js",
+  "scripts": {
+    "build": "webpack --mode production --optimize-minimize",
+    "dev": "webpack --mode production --watch"
+  },
+  "dependencies": {
+    "chrome-sidebar": "^0.1.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
