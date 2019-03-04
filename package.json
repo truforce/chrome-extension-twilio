@@ -5,9 +5,10 @@
   "main": "dist/entry.js",
   "scripts": {
     "build": "webpack --mode production --optimize-minimize",
-    "dev": "webpack --mode production --watch"
+    "dev": "webpack --mode production --watch --progress"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "chrome-sidebar": "^0.1.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2"

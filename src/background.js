@@ -2,9 +2,15 @@ import { attachHeadersListener } from 'chrome-sidebar';
 import { hosts, iframeHosts } from './settings';
 
 chrome.browserAction.onClicked.addListener(tab => {
-	chrome.tabs.executeScript(tab.id, {
+  chrome.storage.sync.get(['workerId'], function(result) {
+    if (!result.workerId) {
+      const url = chrome.runtime.getURL('/options.html');
+      chrome.tabs.create({ url });
+    }
+  });
+  chrome.tabs.executeScript(tab.id, {
     file: 'entry.js'
-	});
+  });
 });
 
 attachHeadersListener({

@@ -1,0 +1,18 @@
+#chrome-flex-call-container {
+  position: fixed;
+  left: 42.5vw;
+  top: 46vh;
+  padding: 20px;
+  width: 15vw;
+  height: 8vh;
+  text-align: center;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 99999;
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+}
+
+.button-block {
+  display: inline-block;
+}

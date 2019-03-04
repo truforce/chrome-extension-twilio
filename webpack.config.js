@@ -6,8 +6,9 @@ module.exports = {
   mode:'production',
   entry: {
     background: path.join(__dirname, './src/background'),
+    content: path.join(__dirname, './src/content'),
     entry: path.join(__dirname, './src/entry'),
-
+    options: path.join(__dirname, './src/options'),
   },
   output: {
     path: path.join(__dirname, './dist'),
@@ -30,7 +31,9 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: 'src/manifest.json' },
-      { from: 'images/**/*' }
+      { from: 'src/content.css' },
+      { from: 'src/options.html' },
+      { from: 'src/assets/**/*', flatten: true }
     ]),
     new webpack.DefinePlugin({
       'process.env': {
@@ -40,5 +43,8 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js']
+  },
+  watchOptions: {
+    ignored: /(node_modules|dist)/
   }
 }
